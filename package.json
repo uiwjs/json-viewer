@@ -1,0 +1,59 @@
+{
+  "name": "json-viewer",
+  "version": "1.0.0",
+  "description": "Online JSON Viewer, JSON Beautifier to beautify and tree view of JSON data - It works as JSON Pretty Print to pretty print JSON data.",
+  "private": true,
+  "scripts": {
+    "start": "kkt start",
+    "build": "kkt build",
+    "test": "kkt test --env=jsdom",
+    "coverage": "kkt test --env=jsdom --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uiwjs/json-viewer.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@uiw/react-copy-to-clipboard": "4.9.1",
+    "@uiw/react-github-corners": "1.4.0",
+    "@uiw/react-split": "5.7.4",
+    "@uiw/react-textarea-code-editor": "1.3.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-json-view": "1.21.3"
+  },
+  "devDependencies": {
+    "@kkt/less-modules": "6.11.0",
+    "@types/react": "17.0.14",
+    "@types/react-dom": "17.0.9",
+    "kkt": "6.11.0"
+  },
+  "jest": {
+    "testMatch": [
+      "<rootDir>/src/**/*.test.{ts,tsx}"
+    ],
+    "collectCoverageFrom": [
+      "<rootDir>/src/app/*.{tsx,ts}"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+.app {
+  height: 100%;
+}
+
+.message {
+  background: #ff000087;
+  padding: 2px 4px;
+  border-radius: 2px;
+  color: white;
+}
+
+.toolbar {
+  padding: 0 5px;
+  font-size: 12px;
+  border-top: 1px solid #d5d5d5;
+  background: #fff;
+  height: 28px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
