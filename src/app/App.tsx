@@ -1,5 +1,6 @@
 import React, { useCallback, useEffect, useRef} from 'react';
 import Split from '@uiw/react-split';
+import GitHubCorners from '@uiw/react-github-corners';
 import CodeEditor, { SelectionText } from '@uiw/react-textarea-code-editor';
 import JsonViewer from 'react-json-view';
 import styles from './App.module.css';
@@ -62,6 +63,7 @@ const App = () => {
 
   return (
     <div className={styles.app}>
+      <GitHubCorners fixed zIndex={999} size={60} target="__blank" href="https://github.com/uiwjs/json-viewer" />
       <Split>
         <div style={{ minWidth: 230, width: '45%', position: 'relative', backgroundColor: 'rgb(245, 245, 245)' }}>
           <div style={{overflow: 'auto',height: '100%', paddingBottom: 25, boxSizing: 'border-box' }}>
