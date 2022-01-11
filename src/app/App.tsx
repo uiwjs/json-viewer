@@ -1,14 +1,14 @@
 import React, { useCallback, useEffect, useRef} from 'react';
 import Split from '@uiw/react-split';
 import GitHubCorners from '@uiw/react-github-corners';
-import CodeEditor, { SelectionText } from '@uiw/react-textarea-code-editor';
 import JsonViewer from 'react-json-view';
+import CodeMirror, { ReactCodeMirrorRef } from '@uiw/react-codemirror';
+import { json as jsonLang } from '@codemirror/lang-json';
 import styles from './App.module.css';
 
 const App = () => {
-  const textareaRef = useRef<HTMLTextAreaElement>(null);
-  const colElm = useRef<HTMLSpanElement>(null);
-  const selectedElm = useRef<HTMLSpanElement>(null);
+  const lineRef = useRef<HTMLSpanElement>(null);
+  const cmRef = useRef<ReactCodeMirrorRef>(null);
   const [code, setCode] = React.useState('');
   const [json, setJson] = React.useState();
   const [message, setMessage] = React.useState('');
@@ -48,23 +48,6 @@ const App = () => {
     }
   }, [code]);
 
-  const handleSelect = useCallback((evn: React.SyntheticEvent<HTMLTextAreaElement>) => {
-    handleColLn(evn.target as HTMLTextAreaElement);
-  }, []);
-
-  const handleColLn = (target: HTMLTextAreaElement | null) => {
-    if (!target) {
-      return
-    }
-    const result = new SelectionText(target as HTMLTextAreaElement);
-    colElm.current!.innerHTML = result.end as unknown as string;
-    selectedElm.current!.innerHTML = result.end - result.start === 0 ? '' : ` selected(${result.end - result.start})`;
-  }
-
-  useEffect(() => {
-    handleColLn(textareaRef.current)
-  }, []);
-
   useEffect(() => {
     handleJson()
   }, [code, handleJson]);
@@ -72,28 +55,17 @@ const App = () => {
   return (
     <div className={styles.app}>
       <GitHubCorners fixed zIndex={999} size={60} target="__blank" href="https://github.com/uiwjs/json-viewer" />
-      <Split>
-        <div style={{ minWidth: 230, width: '45%', position: 'relative', backgroundColor: 'rgb(245, 245, 245)' }}>
-          <div style={{overflow: 'auto',height: '100%', paddingBottom: 25, boxSizing: 'border-box' }}>
-            <CodeEditor
-              value={code}
-              language="json"
-              placeholder="Please enter JSON code."
-              ref={textareaRef}
-              onChange={(evn) => setCode(evn.target.value)}
-              padding={5}
-              onMouseMove={handleSelect}
-              onSelect={handleSelect}
-              style={{
-                minHeight: '100%',
-                fontSize: 12,
-                backgroundColor: "#f5f5f5",
-                fontFamily: 'ui-monospace,SFMono-Regular,SF Mono,Consolas,Liberation Mono,Menlo,monospace',
-              }}
-            />
-          </div>
+      <Split mode="vertical" visiable={false}>
+        <div className={styles.header} style={{  }}>
+          <h1>JSON Viewer</h1>
           <div className={styles.toolbar}>
             <div>
+              <span ref={lineRef} />
+            </div>
+            {message && (
+              <div className={styles.message}>{message}</div>
+            )}
+            <div className={styles.btn}>
               <button onClick={formatJson}>
                 Format
               </button>
@@ -101,26 +73,47 @@ const App = () => {
                 Compress
               </button>
             </div>
-            <div>
-              <span ref={colElm} /><span ref={selectedElm} />
-            </div>
-            <div>
-              {message && (
-                <div className={styles.message}>{message}</div>
-              )}
-            </div>
           </div>
         </div>
-        <div style={{ flex: 1, minWidth: 230, userSelect: 'none', padding: 10, overflow: 'auto' }}>
-          {message && (
-            <pre style={{ padding: 0, margin: 0 }}>
-              {message}
-            </pre>
-          )}
-          {json && typeof json == 'object' && (
-            <JsonViewer src={json!} theme="rjv-default" style={{  }} displayDataTypes={false} />
-          )}
-        </div>
+        <Split style={{ flex: 1, height: 'calc(100% - 32px)' }}>
+          <div style={{ minWidth: 230, width: '45%', position: 'relative', backgroundColor: 'rgb(245, 245, 245)' }}>
+            <div style={{overflow: 'auto',height: '100%', boxSizing: 'border-box' }}>
+              <CodeMirror
+                value={code}
+                ref={cmRef}
+                height="100%"
+                style={{ height: '100%' }}
+                extensions={[jsonLang()]}
+                onUpdate={(cm) => {
+                  const { selection } = cm.state;
+                  const line = cm.view.state.doc.lineAt(selection.main.from);
+                  lineRef.current!.innerHTML = `Line ${line.number}/${cm.state.doc.lines}, Column ${cm.state.selection.main.head - line.from + 1}`;
+                  const text = cm.state.sliceDoc(selection.main.from, selection.main.to);
+                  if (text) {
+                    if (selection.ranges.length > 1) {
+                      lineRef.current!.innerHTML = `${selection.ranges.length} selection regions`;
+                    } else {
+                      lineRef.current!.innerHTML = `${text.split('\n').length} lines, ${text.length} characters selected`;
+                    }
+                  }
+                }}
+                onChange={(value, viewUpdate) => {
+                  setCode(value)
+                }}
+              />
+            </div>
+          </div>
+          <div style={{ flex: 1, minWidth: 230, userSelect: 'none', padding: 10, overflow: 'auto' }}>
+            {message && (
+              <pre style={{ padding: 0, margin: 0 }}>
+                {message}
+              </pre>
+            )}
+            {json && typeof json == 'object' && (
+              <JsonViewer src={json!} theme="rjv-default" style={{  }} displayDataTypes={false} />
+            )}
+          </div>
+        </Split>
       </Split>
     </div>
   )

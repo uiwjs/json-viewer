@@ -7,7 +7,8 @@
     "start": "kkt start",
     "build": "kkt build",
     "test": "kkt test --env=jsdom",
-    "coverage": "kkt test --env=jsdom --coverage"
+    "coverage": "kkt test --env=jsdom --coverage --bail",
+    "map": "source-map-explorer build/static/js/*.js --html build/website-result.html"
   },
   "repository": {
     "type": "git",
@@ -19,7 +20,8 @@
     "@uiw/react-copy-to-clipboard": "4.9.7",
     "@uiw/react-github-corners": "1.5.3",
     "@uiw/react-split": "5.8.5",
-    "@uiw/react-textarea-code-editor": "1.4.15",
+    "@uiw/react-codemirror": "4.3.3",
+    "@codemirror/lang-json": "0.19.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-json-view": "1.21.3"
@@ -28,6 +30,7 @@
     "@kkt/less-modules": "7.0.5",
     "@types/react": "17.0.38",
     "@types/react-dom": "17.0.11",
+    "source-map-explorer": "2.5.2",
     "kkt": "7.0.5"
   },
   "jest": {

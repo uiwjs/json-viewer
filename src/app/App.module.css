@@ -2,8 +2,31 @@
   height: 100%;
 }
 
+.header {
+  min-height: 32px;
+  background: #dcdcdc;
+  display: flex;
+  align-items: center;
+  padding-left: 8px;
+  font-weight: bold;
+}
+
+.header h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+
+.header button {
+  margin: 0 3px;
+}
+.header .btn button:first-child {
+  margin-left: 12px;
+}
+
 .message {
   background: #ff000087;
+  margin-left: 12px;
   padding: 2px 4px;
   border-radius: 2px;
   color: white;
@@ -11,14 +34,9 @@
 
 .toolbar {
   padding: 0 5px;
+  padding-left: 12px;
   font-size: 12px;
-  border-top: 1px solid #d5d5d5;
-  background: #fff;
-  height: 28px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  font-weight: normal;
   display: flex;
   align-items: center;
   justify-content: space-between;
