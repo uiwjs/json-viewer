@@ -21,8 +21,12 @@ const App = () => {
         setJson(obj);
       }
     } catch (error) {
-      setMessage(error.message);
-      setJson(undefined)
+      if (error instanceof Error) {
+        setMessage(error.message);
+        setJson(undefined)
+      } else {
+        throw error;
+      }
     }
   }, [code]);
 
@@ -35,8 +39,12 @@ const App = () => {
         setCode(str);
       }
     } catch (error) {
-      setMessage(error.message);
-      setJson(undefined)
+      if (error instanceof Error) {
+        setMessage(error.message);
+        setJson(undefined)
+      } else {
+        throw error;
+      }
     }
   }, [code]);
 
