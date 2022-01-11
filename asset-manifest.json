@@ -1,13 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.6ce139e1.css",
-    "main.js": "/static/js/main.00dea043.js",
+    "main.css": "/static/css/main.71201deb.css",
+    "main.js": "/static/js/main.e7e70f35.js",
+    "codemirror-vendor.js": "/static/js/codemirror-vendor.2ae00a53.js",
+    "react-vendor.js": "/static/js/react-vendor.9a636117.js",
+    "lezer-vendor.js": "/static/js/lezer-vendor.8eafcbaa.js",
+    "react-json-view-vendor.js": "/static/js/react-json-view-vendor.f9ee92b3.js",
     "index.html": "/index.html",
-    "main.6ce139e1.css.map": "/static/css/main.6ce139e1.css.map",
-    "main.00dea043.js.map": "/static/js/main.00dea043.js.map"
+    "main.71201deb.css.map": "/static/css/main.71201deb.css.map",
+    "main.e7e70f35.js.map": "/static/js/main.e7e70f35.js.map",
+    "codemirror-vendor.2ae00a53.js.map": "/static/js/codemirror-vendor.2ae00a53.js.map",
+    "react-vendor.9a636117.js.map": "/static/js/react-vendor.9a636117.js.map",
+    "lezer-vendor.8eafcbaa.js.map": "/static/js/lezer-vendor.8eafcbaa.js.map",
+    "react-json-view-vendor.f9ee92b3.js.map": "/static/js/react-json-view-vendor.f9ee92b3.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ce139e1.css",
-    "static/js/main.00dea043.js"
+    "static/js/codemirror-vendor.2ae00a53.js",
+    "static/js/react-vendor.9a636117.js",
+    "static/js/lezer-vendor.8eafcbaa.js",
+    "static/js/react-json-view-vendor.f9ee92b3.js",
+    "static/css/main.71201deb.css",
+    "static/js/main.e7e70f35.js"
   ]
 }
