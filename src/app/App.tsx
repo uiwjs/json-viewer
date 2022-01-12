@@ -54,7 +54,7 @@ const App = () => {
 
   return (
     <div className={styles.app}>
-      <GitHubCorners fixed zIndex={999} size={60} target="__blank" href="https://github.com/uiwjs/json-viewer" />
+      <GitHubCorners fixed zIndex={999} size={43} target="__blank" href="https://github.com/uiwjs/json-viewer" />
       <Split mode="vertical" visiable={false}>
         <div className={styles.header} style={{  }}>
           <h1>JSON Viewer</h1>
