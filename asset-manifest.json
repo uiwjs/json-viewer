@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/static/css/main.71201deb.css",
-    "main.js": "/static/js/main.926c4170.js",
-    "codemirror-vendor.js": "/static/js/codemirror-vendor.2ae00a53.js",
+    "main.js": "/static/js/main.6aeb6022.js",
+    "codemirror-vendor.js": "/static/js/codemirror-vendor.35b344de.js",
     "react-vendor.js": "/static/js/react-vendor.9a636117.js",
-    "lezer-vendor.js": "/static/js/lezer-vendor.8eafcbaa.js",
+    "lezer-vendor.js": "/static/js/lezer-vendor.970e0cec.js",
     "react-json-view-vendor.js": "/static/js/react-json-view-vendor.f9ee92b3.js",
     "index.html": "/index.html",
     "main.71201deb.css.map": "/static/css/main.71201deb.css.map",
-    "main.926c4170.js.map": "/static/js/main.926c4170.js.map",
-    "codemirror-vendor.2ae00a53.js.map": "/static/js/codemirror-vendor.2ae00a53.js.map",
+    "main.6aeb6022.js.map": "/static/js/main.6aeb6022.js.map",
+    "codemirror-vendor.35b344de.js.map": "/static/js/codemirror-vendor.35b344de.js.map",
     "react-vendor.9a636117.js.map": "/static/js/react-vendor.9a636117.js.map",
-    "lezer-vendor.8eafcbaa.js.map": "/static/js/lezer-vendor.8eafcbaa.js.map",
+    "lezer-vendor.970e0cec.js.map": "/static/js/lezer-vendor.970e0cec.js.map",
     "react-json-view-vendor.f9ee92b3.js.map": "/static/js/react-json-view-vendor.f9ee92b3.js.map"
   },
   "entrypoints": [
-    "static/js/codemirror-vendor.2ae00a53.js",
+    "static/js/codemirror-vendor.35b344de.js",
     "static/js/react-vendor.9a636117.js",
-    "static/js/lezer-vendor.8eafcbaa.js",
+    "static/js/lezer-vendor.970e0cec.js",
     "static/js/react-json-view-vendor.f9ee92b3.js",
     "static/css/main.71201deb.css",
-    "static/js/main.926c4170.js"
+    "static/js/main.6aeb6022.js"
   ]
 }
