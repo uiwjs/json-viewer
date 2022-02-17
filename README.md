@@ -6,7 +6,21 @@ https://uiwjs.github.io/json-viewer
 
 [![Online JSON Viewer](https://user-images.githubusercontent.com/1680273/149053681-1f9f525e-9b45-45f8-be3c-34c1ac91fc51.png)](https://uiwjs.github.io/json-viewer)
 
-Reference:
+**Reference:**
 
 https://www.json.org/json-en.html  
 https://tools.ietf.org/html/rfc8259 (The latest IETF RFC – contains the latest full spec)
+
+**Contributors**
+
+As always, thanks to our amazing contributors!
+
+<a href="https://github.com/uiwjs/json-viewer/graphs/contributors">
+  <img src="https://uiwjs.github.io/json-viewer/CONTRIBUTORS.svg" />
+</a>
+
+Made with [github-action-contributors](https://github.com/jaywcjlove/github-action-contributors).
+
+**License**
+
+Licensed under the MIT License.
