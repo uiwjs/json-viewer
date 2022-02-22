@@ -17,7 +17,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@uiw/react-copy-to-clipboard": "4.9.7",
+    "@uiw/react-copy-to-clipboard": "4.11.6",
     "@uiw/react-github-corners": "1.5.3",
     "@uiw/react-split": "5.8.5",
     "@uiw/react-codemirror": "4.4.3",
