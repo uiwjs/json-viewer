@@ -35,6 +35,10 @@
     "kkt": "7.1.5"
   },
   "jest": {
+    "coverageReporters": [
+      "lcov",
+      "json-summary"
+    ],
     "testMatch": [
       "<rootDir>/src/**/*.test.{ts,tsx}"
     ],
