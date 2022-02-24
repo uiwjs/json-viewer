@@ -1,4 +1,4 @@
-name: Build & Deploy
+name: CI
 on:
   push:
     branches:
@@ -16,6 +16,11 @@ jobs:
     - run: npm install
     - run: npm run build
     - run: npm run coverage
+    
+    - name: Create Coverage Badges
+      uses: jaywcjlove/coverage-badges-cli@main
+      with:
+        output: build/badges.svg
 
     - name: Generate Contributors Images
       uses: jaywcjlove/github-action-contributors@main
