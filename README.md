@@ -6,20 +6,13 @@ https://uiwjs.github.io/json-viewer
 
 [![Online JSON Viewer](https://user-images.githubusercontent.com/1680273/149053681-1f9f525e-9b45-45f8-be3c-34c1ac91fc51.png)](https://uiwjs.github.io/json-viewer)
 
-**url parameters:**
+**URL Parameters:**
 
-```bash
-# Hiden Header
-https://uiwjs.github.io/json-viewer/#/?hidenheader=1
-# Hiden GitHub Corners
-https://uiwjs.github.io/json-viewer/#/?corner=1
-# GitHub corners href
-https://uiwjs.github.io/json-viewer/#/?corner=1&cornerhref=cornerhref=https://github.com/uiwjs/json-viewer
-# view=preview|editor
-https://uiwjs.github.io/json-viewer/#/?view=preview&json=%7B%0A%20%20"a":%20234%0A%7D
-# Share Code
-https://uiwjs.github.io/json-viewer/#/?hidenheader=1&json=%7B%0A%20%20"a":%20234%0A%7D
-```
+- `Hiden Header` https://uiwjs.github.io/json-viewer/#/?hidenheader=1
+- `Hiden GitHub Corners` https://uiwjs.github.io/json-viewer/#/?corner=1
+- `GitHub corners href` https://uiwjs.github.io/json-viewer/#/?corner=1&cornerhref=cornerhref=https://github.com/uiwjs/json-viewer
+- `view=preview|editor` https://uiwjs.github.io/json-viewer/#/?view=preview&json=%7B%0A%20%20"a":%20234%0A%7D
+- `Share Code` https://uiwjs.github.io/json-viewer/#/?hidenheader=1&json=%7B%0A%20%20"a":%20234%0A%7D
 
 **Reference:**
 
