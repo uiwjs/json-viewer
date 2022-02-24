@@ -16,7 +16,7 @@ https://uiwjs.github.io/json-viewer/#/?corner=0
 # GitHub corners href
 https://uiwjs.github.io/json-viewer/#/?corner=1&cornerhref=cornerhref=https://github.com/uiwjs/json-viewer
 # view=preview|editor
-https://uiwjs.github.io/json-viewer/#/?view=preview
+https://uiwjs.github.io/json-viewer/#/?view=preview&json=%7B%0A%20%20"a":%20234%0A%7D
 # Share Code
 https://uiwjs.github.io/json-viewer/#/?hidenheader=1&json=%7B%0A%20%20"a":%20234%0A%7D
 ```

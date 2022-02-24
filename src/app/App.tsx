@@ -1,4 +1,4 @@
-import React, { Fragment, useCallback, useEffect, useRef} from 'react';
+import React, { useCallback, useEffect, useRef} from 'react';
 import Split from '@uiw/react-split';
 import GitHubCorners from '@uiw/react-github-corners';
 import JsonViewer from 'react-json-view';
@@ -82,7 +82,7 @@ const App = () => {
 
   const shareJson = () => {
     param.json = encodeURI(code);
-    history.push(`${window.location.pathname}${objectToQueryString(param)}`, { some: "state" });
+    history.push(`${objectToQueryString(param)}`, { some: "state" });
   }
 
   useEffect(() => {
@@ -169,11 +169,8 @@ const App = () => {
           </div>
         )}
         <Split style={{ flex: 1, height: param.hidenheader !== '1' ? 'calc(100% - 32px)' : '100%' }}>
-          {!param.view && (
-            <Fragment>
-              {editor}{preview}
-            </Fragment>
-          )}
+          {!param.view && editor}
+          {!param.view && preview}
           {param.view === 'editor' && editor}
           {param.view === 'preview' && preview}
         </Split>
