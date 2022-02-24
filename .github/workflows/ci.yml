@@ -16,6 +16,7 @@ jobs:
     - run: npm install
     - run: npm run build
     - run: npm run coverage
+    - run: cp -rp coverage/lcov-report build/
     
     - name: Create Coverage Badges
       uses: jaywcjlove/coverage-badges-cli@main
