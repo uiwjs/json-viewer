@@ -1,5 +1,8 @@
 [`Online JSON Viewer`](https://uiwjs.github.io/json-viewer)
 
+[![CI](https://github.com/uiwjs/json-viewer/actions/workflows/ci.yml/badge.svg)](https://github.com/uiwjs/json-viewer/actions/workflows/ci.yml)
+[![Coverage Badge](https://uiwjs.github.io/json-viewer/badge.svg)](https://uiwjs.github.io/json-viewer/lcov-report/)
+
 Online JSON Viewer, JSON Beautifier to beautify and tree view of JSON data - It works as JSON Pretty Print to pretty print JSON data.
 
 https://uiwjs.github.io/json-viewer
