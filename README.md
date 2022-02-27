@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/uiwjs/json-viewer/actions/workflows/ci.yml/badge.svg)](https://github.com/uiwjs/json-viewer/actions/workflows/ci.yml)
 [![Coverage Badge](https://uiwjs.github.io/json-viewer/badges.svg)](https://uiwjs.github.io/json-viewer/lcov-report/)
+[![Open in Gitpod](https://shields.io/badge/Open%20in-Gitpod-green?logo=Gitpod)](https://gitpod.io/#https://github.com/uiwjs/json-viewer)
 [![Gitee Website](https://jaywcjlove.github.io/sb/ico/gitee.svg)](https://uiw.gitee.io/json-viewer)
 
 Online JSON Viewer, JSON Beautifier to beautify and tree view of JSON data - It works as JSON Pretty Print to pretty print JSON data.
