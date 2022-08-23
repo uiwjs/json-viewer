@@ -61,8 +61,7 @@ const App = () => {
       }
     }
   }, [code]);
-
-  const formatJson = useCallback((_, replacer: number = 2) => {
+  const formatJson = useCallback((_: any, replacer: number = 2) => {
     setMessage('');
     try {
       if (code) {
