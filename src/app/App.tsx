@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef} from 'react';
 import Split from '@uiw/react-split';
 import GitHubCorners from '@uiw/react-github-corners';
-import JsonViewer from 'react-json-view';
+import JsonViewer from '@uiw/react-json-view';
 import CodeMirror, { ReactCodeMirrorRef } from '@uiw/react-codemirror';
 import { json as jsonLang } from '@codemirror/lang-json';
 import { createHashHistory } from 'history';
@@ -16,8 +16,8 @@ type Parameters = {
 }
 const history = createHashHistory();
 const getURLParameters = (url: string): Parameters =>
-  (url.match(/([^?=&]+)(=([^&]*))/g) || []).reduce(
-    (a: any, v) => (
+  ((url.match(/([^?=&]+)(=([^&]*))/g) || []) as any).reduce(
+    (a: any, v: string) => (
       ((a[v.slice(0, v.indexOf('='))] = v.slice(v.indexOf('=') + 1)), a)
     ),
     {}
@@ -129,7 +129,7 @@ const App = () => {
         </pre>
       )}
       {json && typeof json == 'object' && (
-        <JsonViewer src={json!} theme="rjv-default" style={{  }} displayDataTypes={false} />
+        <JsonViewer value={json!} style={{  }} displayDataTypes={false} />
       )}
     </div>
   );
