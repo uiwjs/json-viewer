@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.bb63329c.css",
-    "main.js": "/static/js/main.6b8d6aee.js",
-    "codemirror-vendor.js": "/static/js/codemirror-vendor.e38af1ad.js",
-    "react-vendor.js": "/static/js/react-vendor.102de610.js",
-    "lezer-vendor.js": "/static/js/lezer-vendor.e271ab0b.js",
+    "main.js": "/static/js/main.250ec564.js",
+    "codemirror-vendor.js": "/static/js/codemirror-vendor.01cd16a4.js",
+    "react-vendor.js": "/static/js/react-vendor.9584b15b.js",
+    "lezer-vendor.js": "/static/js/lezer-vendor.84ea476e.js",
     "index.html": "/index.html",
     "main.bb63329c.css.map": "/static/css/main.bb63329c.css.map",
-    "main.6b8d6aee.js.map": "/static/js/main.6b8d6aee.js.map",
-    "codemirror-vendor.e38af1ad.js.map": "/static/js/codemirror-vendor.e38af1ad.js.map",
-    "react-vendor.102de610.js.map": "/static/js/react-vendor.102de610.js.map",
-    "lezer-vendor.e271ab0b.js.map": "/static/js/lezer-vendor.e271ab0b.js.map"
+    "main.250ec564.js.map": "/static/js/main.250ec564.js.map",
+    "codemirror-vendor.01cd16a4.js.map": "/static/js/codemirror-vendor.01cd16a4.js.map",
+    "react-vendor.9584b15b.js.map": "/static/js/react-vendor.9584b15b.js.map",
+    "lezer-vendor.84ea476e.js.map": "/static/js/lezer-vendor.84ea476e.js.map"
   },
   "entrypoints": [
-    "static/js/codemirror-vendor.e38af1ad.js",
-    "static/js/react-vendor.102de610.js",
-    "static/js/lezer-vendor.e271ab0b.js",
+    "static/js/codemirror-vendor.01cd16a4.js",
+    "static/js/react-vendor.9584b15b.js",
+    "static/js/lezer-vendor.84ea476e.js",
     "static/css/main.bb63329c.css",
-    "static/js/main.6b8d6aee.js"
+    "static/js/main.250ec564.js"
   ]
 }
