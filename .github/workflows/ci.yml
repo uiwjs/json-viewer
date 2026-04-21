@@ -8,31 +8,31 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/setup-node@v4
-      with:
-        node-version: 20
-        registry-url: 'https://registry.npmjs.org'
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          registry-url: 'https://registry.npmjs.org'
 
-    - run: npm install --legacy-peer-deps
-    - run: npm run build
-    - run: npm run coverage
-    - run: cp -rp coverage/lcov-report build/
-    
-    - name: Create Coverage Badges
-      uses: jaywcjlove/coverage-badges-cli@main
-      with:
-        output: build/badges.svg
+      - run: npm install --legacy-peer-deps
+      - run: npm run build
+      - run: npm run coverage
+      - run: cp -rp coverage/lcov-report build/
+      
+      - name: Create Coverage Badges
+        uses: jaywcjlove/coverage-badges-cli@main
+        with:
+          output: build/badges.svg
 
-    - name: Generate Contributors Images
-      uses: jaywcjlove/github-action-contributors@main
-      with:
-        filter-author: (renovate\[bot\]|renovate-bot|dependabot\[bot\])
-        output: build/CONTRIBUTORS.svg
-        avatarSize: 42
+      - name: Generate Contributors Images
+        uses: jaywcjlove/github-action-contributors@main
+        with:
+          filter-author: (renovate\[bot\]|renovate-bot|dependabot\[bot\])
+          output: build/CONTRIBUTORS.svg
+          avatarSize: 42
 
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v4
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
